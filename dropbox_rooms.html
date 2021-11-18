@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hotel</title>
+</head>
+<body>
+<h1>Hello</h1>
+    <div id="dropdown"></div>
+
+
+    <script>
+        let roomList = [101, 102, 103, 201, 202, 203, 301, 302, 303]
+        let html = "<select>"
+
+        for (let i = 0; i < roomList.length; i++) {
+        html = html + `<option value="${roomList[i]}">${roomList[i]}</option>`
+        console.log(roomList[i])
+      }  
+         html = html + "</select>"
+         document.getElementById("dropdown").innerHTML = html;
+         let bookedRooms = [];
+    </script>
+   </body>
+  </html>

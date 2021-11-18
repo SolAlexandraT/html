@@ -4,38 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rate your experience</title>
+    <title>Running Gear</title>
 </head>
-<script>
-    function favTutorial() {
-    var mylist = document.getElementById("myList");
-    document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
-    }
+<body style="background-color:grey;">
+    <h1 style = "color: pink;"><strong>Thank you for shopping with us!</strong></h1>
+    <h3 style = "color: pink;">We appreciate your loyalty. <br> Please rate our service based on your experience <br> and recieve 10% off your next purchase.</h3>
+    <select id="select">
+        <option value="default">rate from 1-10</option>
+    </select>
+    
+    <script>
+        
+        let select = document.getElementById("select"),
+                 arr = [1, 2, 3, 4, 5 ,6 ,7, 8, 9, 10];
+         
+         for(let i = 0; i < arr.length; i++)
+         {
+             let option = document.createElement("OPTION"),
+                 txt = document.createTextNode(arr[i]);
+             option.appendChild(txt);
+             option.setAttribute("value",arr[i]);
+             select.insertBefore(option,select.lastChild);
+         }
+         
     </script>
-<body>
-    <h1>Thank you for shopping with us!</h1>
-    <form>
-        <b style="color: purple"> Please rate our service based on your experience today :) </b>
-        <select id = "myList" onchange = "favTutorial()" >
-            <option> Rating </option>
-            <option> 1 </option>
-            <option> 2 </option>
-            <option> 3 </option>
-            <option> 4 </option>
-            <option> 5 </option>
-            <option> 6 </option>
-            <option> 7 </option>
-            <option> 8 </option>
-            <option> 9 </option>
-            <option> 10 </option>
-        </select>
-        <p> Your rating is: 
-        <input type = "text" id = "favourite" size = "20" </p>
-        </form>
 </body>
-<br>
-
-<select>
-
-</select>
 </html>
