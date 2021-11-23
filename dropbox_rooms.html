@@ -8,31 +8,29 @@
 </head>
 <body>
 <h1>Hotel Bookings</h1>
-    <div id="dropdown"></div>    <script>
+    <div id="dropdown"></div> 
+    
+<input type="button" id="btnDelete" value="Booked" />
+<input type="button" onclick="removeRoom()" value="Select and Book"> 
+       <script>
+        
         let roomList = [101, 102, 103, 201, 202, 203, 301, 302, 303]
-        let html = "<select>"       
+        let html = "<select id = 'booked' >"       
         for (let i = 0; i < roomList.length; i++) {
         html = html + `<option value="${roomList[i]}">${roomList[i]}</option>`
         console.log(roomList[i])
 
-        function removeOptions(selectbox)
-{
-	let i= selectBox
-    
-	for(let i=selectBox.options.length-1;i>=0;i--)
-	{
-	if(selectBox.options[i].selected)
-	selectbox.remove(i);
-
-    console.log(selectboc)
-    
-	}
-}
         
       }  
          html = html + "</select>"
+         function removeRoom(){
+          let i = document.getElementaryById("booked");
+          i.remove(i.selectedIndex);
+         }
          document.getElementById("dropdown").innerHTML = html;
          let bookedRooms = [];
     </script>
+    
    </body>
+   
   </html>
